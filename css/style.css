@@ -9,6 +9,9 @@ body {
 	font-family: "Poppins", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+}
+
+body {
 	overflow-y:scroll;
 }
 
