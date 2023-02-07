@@ -28,16 +28,28 @@
 
 <body>
 
-<div class="imgbox">
+<div class="imgbox" onclick="openFullscreen();">
   <img class="featured fade center" src="img/portfolio/51.jpg">
   <img class="featured fade center" src="img/portfolio/27.jpg">
   <img class="featured fade center" src="img/portfolio/43.jpg">
 </div>
 
+
 <script>
 var myIndex = 0;
+
 carousel();
 
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
 function carousel() {
   var i;
   var x = document.getElementsByClassName("featured");
