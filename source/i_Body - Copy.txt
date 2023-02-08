@@ -1,0 +1,5 @@
+			<div class="hero-item portfolio-item set-bg" data-setbg="img/portfolio/tn_[num].jpg">
+				<a href="img/portfolio/[num].jpg" class="hero-link portfolio-item img-popup set-bg" data-setbg="img/portfolio/tn_[num].jpg">
+					<h2>[title]</h2>
+				</a>
+			</div>

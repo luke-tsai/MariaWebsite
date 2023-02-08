@@ -1,0 +1,43 @@
+			</div>
+			<script>
+				$('#mygallery').justifiedGallery({
+					randomize : true,
+					rowHeight : 200
+
+				});
+	$('.enable-oil').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Oil' });
+        });
+        $('.enable-acrylic').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Acrylic' });
+        });
+        $('.enable-still').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Still' });
+        });
+        $('.enable-chinese').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Chinese' });
+        });
+        $('.enable-landscape').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Landscape' });
+        });
+        $('.enable-all').click(function () {
+            $("#mygallery").justifiedGallery({ filter: false });
+        });
+
+        $("#mygallery").justifiedGallery();
+			</script>
+<div>
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/instafeed.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+	</body>
+</html>

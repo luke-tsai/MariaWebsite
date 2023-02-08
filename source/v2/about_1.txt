@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<head>
+	<title>Maria Tsai</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Maria Tsai's Painting Portfolio">
+	<meta name="keywords" content="Maria, Tsai, Painting, Portfolio, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/justifiedGallery.min.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<style>
+	.featured {display:none;}
+	</style>
+</head>
+
+<body>
+    <div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section  -->
+	<header class="header-section">
+		<a href="index.html" class="site-logo"><img src="img/logo.png" alt="logo"></a>
+		<a href="index.html"class="link-page">Return Home</a>
+	</header>
+
+	<div class="clearfix"></div>
+	<!-- Header section end  -->
+
+	<!-- Contact section  -->
+	<section class="elements-section">
+		<div class="container">
+			<!-- element -->
+			<div class="element">
+
+<p></p>
+				<div class="row">
+
+					<div class="col-xl-6">
+						<img src="img/about2.jpg" alt="Maria Tsai">
+
+<p></p>
+
+<div id="collapse1a" class="collapse" aria-labelledby="headingOne">
+<img src="img/about.jpg" alt="Maria Tsai">
+<p></p>
+								</div>
+					</div>
+
+					<div class="col-xl-6">
+						<!-- Accordions -->
+						<div id="accordion" class="accordion-area">
+							<div class="panel">
+								<div class="panel-header" id="headingOne">
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse1,#collapse1a" aria-expanded="false" aria-controls="collapse1 collapse1a">Biography</button>
+								</div>
+								<div id="collapse1" class="collapse" aria-labelledby="headingOne">
+									<div class="panel-body">

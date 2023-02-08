@@ -1,0 +1,156 @@
+
+		</div>
+	</div>
+	<!-- Hero section end  -->
+	
+	<!-- Contact section  -->
+	<section class="elements-section">
+		<div class="container">
+			<!-- element -->
+			<div class="element">
+
+						<h2>About Maria Tsai</h2><p></p>
+
+<p></p>
+				<div class="row">
+
+					<div class="col-xl-6">
+						<img src="img/about.jpg" alt="Maria Tsai">
+
+<p></p>									
+						<!--
+<div class="about-bg set-bg" data-setbg="img/about.jpg"></div>
+-->
+
+<div id="collapse1a" class="collapse" aria-labelledby="headingOne">
+<img src="img/about2.jpg" alt="Maria Tsai">
+<p></p>									
+								</div>
+					</div>
+
+					<div class="col-xl-6">
+						<!-- Accordions -->
+						<div id="accordion" class="accordion-area">
+							<div class="panel">
+								<div class="panel-header" id="headingOne">
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse1,#collapse1a" aria-expanded="false" aria-controls="collapse1 collapse1a">Biography</button>
+								</div>
+								<div id="collapse1" class="collapse" aria-labelledby="headingOne">
+									<div class="panel-body">
+										<p>Maria Tsai is an oil painter from Clifton Park and a member of professional art organizations. Maria's paintings are well received in various galleries in the Capital Region. She is often praised for her grasp of picture composition and her particular delivering of lighting to the subjects.</p>
+<p>Maria grew up in Shanghai in a family with artistic tradition, both her grandfather and father were an accomplished photographer. However, growing up in the repressive era of the “Cultural revolution” in China, artistic inclinations were frowned upon as being narcissistic. Fortunately for Maria, she emigrated to Canada at the tender age of 23 when her husband came over for his PhD. in chemistry. But family life ensured that she remained blissfully oblivious of her own artistic talents. </p>
+<p>Her love affair with painting started about four years ago during a sip-and-paint session. A simple ladies’ night out turned into an explosive discovery as she realized how much she loved painting. The rest of the evening, she experienced flow for the first time in her life as she remained blissfully oblivious to her friends and her surroundings. Maria had heard anecdotes about chess masters, mathematicians, surgeons being so involved in flow that the roof could have fallen around them and they would have stayed oblivious and she had always scoffed at that thought but no more, that night, she knew she had discovered the secret to her flow and she realized that the building could have come crashing down around her and she would have been just as oblivious.</p>
+<p>Since then, she has been attending workshops with artist Robin Rosenthal, Corey Pitkin, Takeyce Walter, Vincent Crotty and Joan Lord to sharpen her skills.
+Maria experiences an intense joy that when she discovers the effect of light in new and unexpected variations on water as well as on other still life objects and fortunately for us , she does an excellent job of sharing it with all of us.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel">
+								<div class="panel-header" id="headingTwo">
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Awards</button>
+								</div>
+								<div id="collapse2" class="collapse" aria-labelledby="headingTwo">
+									<div class="panel-body">
+<p></p>
+										<ul style="padding-left:20px;color:#888888">
+				<li>Autumn Jewels Art Show 2017: First Place</li>
+				<li>Hagaman Art Show 2017: Third Place</li>
+				<li>Autumn Jewels Art Show 2016: Honorable Mention</li>
+				<li>Hagaman Art Show 2016: Third Place</li>
+				<br>
+			</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel">
+								<div class="panel-header" id="headingThree">
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Contact</button>
+								</div>
+								<div id="collapse3" class="collapse" aria-labelledby="headingThree">
+									<div class="panel-body">
+										<p>Thanks for visiting my website. Please feel free to contact me at <a href="mailto:art@mariatsai.com">art@mariatsai.com</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- element -->
+			<div class="element">
+				<h3 class="el-title">Skills</h3>
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="circle-progress" data-cptitle="Passion" data-cpid="id-1" data-cpvalue="100" data-cpcolor="#304a5f"></div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="circle-progress" data-cptitle="Models" data-cpid="id-2" data-cpvalue="75" data-cpcolor="#304a5f"></div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="circle-progress" data-cptitle="Studio" data-cpid="id-3" data-cpvalue="25" data-cpcolor="#304a5f"></div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="circle-progress" data-cptitle="Nature" data-cpid="id-4" data-cpvalue="50" data-cpcolor="#304a5f"></div>
+					</div>
+				</div>
+			</div>
+			<!-- element -->
+			<div class="element">
+				<h3 class="el-title">Milestones</h3>
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="milestone">
+							<h2>100K</h2>
+							<p>IG Followers</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="milestone">
+							<h2>3678</h2>
+							<p>Pictures Taken</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="milestone">
+							<h2>29</h2>
+							<p>Weddings</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="milestone">
+							<h2>19k</h2>
+							<p>Puppies Photots</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- element -->
+			<div class="element">
+				<h3 class="el-title">Icon Boxes</h3>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="services-item">
+							<img src="img/icons/1.png" alt="">
+							<h4>Studio Photography</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid-idunt ut labore et dolore magna aliqua. </p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="services-item">
+							<img src="img/icons/2.png" alt="">
+							<h4>Wedding Editing</h4>
+							<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="services-item">
+							<img src="img/icons/3.png" alt="">
+							<h4>Photo on tape</h4>
+							<p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Elements section end  -->

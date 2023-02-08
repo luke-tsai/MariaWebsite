@@ -1,0 +1,4 @@
+			<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0 [tags]">
+				<a href="img/portfolio/[num].jpg" title="[title], [size]" class="portfolio-item img-popup set-bg" data-setbg="img/portfolio/tn_[num].jpg"></a>
+			</div>
+

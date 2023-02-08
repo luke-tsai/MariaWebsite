@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Maria Tsai's Portfolio</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Maria Tsai's Portfolio">
+	<meta name="keywords" content="Maria, Tsai, Painting, Portfolio, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/justifiedGallery.min.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+
+
+	<!-- Header section  -->
+	<header class="header-section">
+		
+		<a href="index.html" class="site-logo"><img src="img/logo.png" alt="logo"></a>
+		<a href="index.html"class="link-page">Return Home</a>
+	</header>
+	<div class="clearfix"></div>
+	<!-- Header section end  -->
+
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.justifiedGallery.min.js"></script>
+
+	<!-- Portfolio section  -->
+	<div class="portfolio-section portfolio-filter controls text-center">
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 0px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-oil">Oil</li>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-acrylic">Acrylic</button>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-still">Still</button>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-chinese">Chinese</button>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-landscape">Landscape</button>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 0px;
+	cursor: pointer;" class="enable-all">All</button>
+    </div>
+			<div id="mygallery" class="justified-gallery">

@@ -1,0 +1,4 @@
+
+				<a href="img/portfolio/[num]" title="[title], [size]" class="img-popup [tags]">
+					<img alt="[title]" src="img/thumbnails/[num]">
+				</a>

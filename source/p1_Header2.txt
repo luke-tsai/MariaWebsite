@@ -1,0 +1,72 @@
+
+	<!-- Header section  -->
+	<header class="header-section">
+		
+		<a href="index.html" class="site-logo"><img src="img/logo.png" alt="logo"></a>
+		<a href="index.html"class="link-page">Return Home</a>
+	</header>
+	<div class="clearfix"></div>
+	<!-- Header section end  -->
+
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.justifiedGallery.min.js"></script>
+
+	<!-- Portfolio section  -->
+	<div class="portfolio-section portfolio-filter controls text-center">
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 0px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-oil">Oil</li>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-acrylic">Acrylic</button>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-still">Still</button>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-chinese">Chinese</button>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-landscape">Landscape</button>
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 0px;
+	cursor: pointer;" class="enable-all">All</button>
+    </div>
+			<div id="mygallery" class="justified-gallery">

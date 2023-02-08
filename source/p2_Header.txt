@@ -1,0 +1,12 @@
+	<!-- Portfolio section  -->
+	<div class="portfolio-2-section">
+		<ul class="portfolio-filter pf-2 controls text-center">
+			<li class="control" data-filter="all">All</li>
+			<li class="control" data-filter=".Oil">Oil</li>
+			<li class="control" data-filter=".Acrylic">Acrylic</li>
+			<li class="control" data-filter=".Chinese">Chinese</li>
+			<li class="control" data-filter=".Still">Still Life</li>
+			<li class="control" data-filter=".Landscape">Landscape</li>
+		</ul>                                    
+		<div class="portfolio-warp">
+			<div class="row portfolio-gallery m-0">

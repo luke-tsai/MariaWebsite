@@ -1,0 +1,33 @@
+<br>
+			</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel">
+								<div class="panel-header" id="headingThree">
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Contact</button>
+								</div>
+								<div id="collapse3" class="collapse" aria-labelledby="headingThree">
+									<div class="panel-body">
+										<p>Thanks for visiting my website. Please feel free to contact me at <a href="mailto:art@mariatsai.com">art@mariatsai.com</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/instafeed.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

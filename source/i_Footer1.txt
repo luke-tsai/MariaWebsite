@@ -1,0 +1,40 @@
+
+		</div>
+	</div>
+	<!-- Hero section end  -->
+	
+	<!-- Contact section  -->
+	<section class="elements-section">
+		<div class="container">
+			<!-- element -->
+			<div class="element">
+
+						<h2>About Maria Tsai</h2><p></p>
+
+<p></p>
+				<div class="row">
+
+					<div class="col-xl-6">
+						<img src="img/about2.jpg" alt="Maria Tsai">
+
+<p></p>									
+						<!--
+<div class="about-bg set-bg" data-setbg="img/about.jpg"></div>
+-->
+
+<div id="collapse1a" class="collapse" aria-labelledby="headingOne">
+<img src="img/about.jpg" alt="Maria Tsai">
+<p></p>									
+								</div>
+					</div>
+
+					<div class="col-xl-6">
+						<!-- Accordions -->
+						<div id="accordion" class="accordion-area">
+							<div class="panel">
+								<div class="panel-header" id="headingOne">
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse1,#collapse1a" aria-expanded="false" aria-controls="collapse1 collapse1a">Biography</button>
+								</div>
+								<div id="collapse1" class="collapse" aria-labelledby="headingOne">
+									<div class="panel-body">
+										

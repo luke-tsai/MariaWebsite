@@ -1,0 +1,36 @@
+
+									</div>
+								</div>
+							</div>
+							<div class="panel">
+								<div class="panel-header" id="headingTwo">
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Awards</button>
+								</div>
+								<div id="collapse2" class="collapse" aria-labelledby="headingTwo">
+									<div class="panel-body">
+<p></p>
+										<ul style="padding-left:20px;color:#888888">
+				<li>Autumn Jewels Art Show 2017: First Place</li>
+				<li>Hagaman Art Show 2017: Third Place</li>
+				<li>Autumn Jewels Art Show 2016: Honorable Mention</li>
+				<li>Hagaman Art Show 2016: Third Place</li>
+				<br>
+			</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel">
+								<div class="panel-header" id="headingThree">
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Contact</button>
+								</div>
+								<div id="collapse3" class="collapse" aria-labelledby="headingThree">
+									<div class="panel-body">
+										<p>Thanks for visiting my website. Please feel free to contact me at <a href="mailto:art@mariatsai.com">art@mariatsai.com</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			

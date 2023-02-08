@@ -5,7 +5,7 @@
 <head>
 	<title>Maria Tsai</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="Maria Tsai's Painting Portfolio">
+	<meta name="description" content="Maria Tsai's Portfolio">
 	<meta name="keywords" content="Maria, Tsai, Painting, Portfolio, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
@@ -27,12 +27,18 @@
 </head>
 
 <body>
-
+	<audio id="myAudio" >
+		<source src="music/background.mp3" type="audio/mpeg">
+	</audio>
 <div class="imgbox" onclick="openFullscreen();">
-  <img class="featured fade center" src="img/portfolio/51.jpg">
-  <img class="featured fade center" src="img/portfolio/27.jpg">
-  <img class="featured fade center" src="img/portfolio/43.jpg">
-</div>
+  <img class="featured fade center" src="img/portfolio/19 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230206_174840 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230206_174720 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230119_140805 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230119_140840 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/123_1(7) - Maria Tsai.jpeg">
+  <img class="featured fade center" src="img/portfolio/20230119_141058 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230206_175016 - Maria Tsai.jpg"></div>
 
 
 <script>
@@ -41,6 +47,8 @@ var myIndex = 0;
 carousel();
 
 var elem = document.documentElement;
+var mus = document.getElementById("myAudio");
+
 function openFullscreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
@@ -49,16 +57,24 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
+  mus.loop=true;
+  mus.load();
+  mus.play();
+
 }
+
 function carousel() {
   var i;
   var x = document.getElementsByClassName("featured");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
+  myIndex=Math.floor(Math.random() * x.length);
+  x[myIndex].style.display = "block";
+
+  //myIndex++;
+  //if (myIndex > x.length) {myIndex = 1}
+  //x[myIndex-1].style.display = "block";
   setTimeout(carousel, 30000);
 }
 </script>
