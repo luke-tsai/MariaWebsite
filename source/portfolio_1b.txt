@@ -1,0 +1,12 @@
+
+        <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 0px;
+	cursor: pointer;" class="enable-all">All</button>
+    </div>
+			<div id="mygallery" class="justified-gallery">

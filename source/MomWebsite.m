@@ -9,17 +9,21 @@ function MomWebsite
     [Image,Title,Date,Dimensions,Price,Display,Feature,Tags] = importfile([fileloc,'drive_export\Maria Photos.xlsx']);
     [Description,Awards] = importabout([fileloc,'drive_export\Maria Photos.xlsx']);
 
-    about_1=fileread([fileloc,'source\v2\about_1.txt']);
-    about_2=fileread([fileloc,'source\v2\about_2.txt']);
-    about_3=fileread([fileloc,'source\v2\about_3.txt']);
+    about_1=fileread([fileloc,'source\about_1.txt']);
+    about_2=fileread([fileloc,'source\about_2.txt']);
+    about_3=fileread([fileloc,'source\about_3.txt']);
     
-    slideshow_1=fileread([fileloc,'source\v2\fullscreen_1.txt']);
-    slideshow_2=fileread([fileloc,'source\v2\fullscreen_2.txt']);
-    slideshow_filler=fileread([fileloc,'source\v2\fullscreen_filler.txt']);
+    slideshow_1=fileread([fileloc,'source\fullscreen_1.txt']);
+    slideshow_2=fileread([fileloc,'source\fullscreen_2.txt']);
+    slideshow_filler=fileread([fileloc,'source\fullscreen_filler.txt']);
     
-    portfolio_1=fileread([fileloc,'source\v2\portfolio_1.txt']);
-    portfolio_2=fileread([fileloc,'source\v2\portfolio_2.txt']);
-    portfolio_filler=fileread([fileloc,'source\v2\portfolio_filler.txt']);
+    portfolio_1a=fileread([fileloc,'source\portfolio_1a.txt']);
+    portfolio_1b=fileread([fileloc,'source\portfolio_1b.txt']);
+    portfolio_2a=fileread([fileloc,'source\portfolio_2a.txt']);
+    portfolio_2b=fileread([fileloc,'source\portfolio_2b.txt']);
+    portfolio_filler=fileread([fileloc,'source\portfolio_filler.txt']);
+    portfolio_1filler=fileread([fileloc,'source\portfolio_1filler.txt']);
+    portfolio_2filler=fileread([fileloc,'source\portfolio_2filler.txt']);
     
     portfolio_file=[fileloc,'portfolio.html'];
     slideshow_file=[fileloc,'fullscreen.html'];
@@ -51,10 +55,20 @@ function MomWebsite
     disp('Images Copied')
     %% creates portfolio file
     fid = fopen(portfolio_file,'w');
-    fprintf(fid, '%s', portfolio_1);
+    fprintf(fid, '%s', portfolio_1a);
     fclose(fid);
+    Tags=erase(Tags,',');
+    U_tags=unique(split(strjoin(Tags(2:end))));
     
     fid = fopen(portfolio_file,'a');
+    
+    for i = [2:length(U_tags)]
+    	data=strrep(portfolio_1filler,'[tag]',U_tags(i));
+        fprintf(fid, '%s', data);
+    end
+    
+    fprintf(fid, '%s', portfolio_1b);
+    
     for i = [1:length(Image)]
         if Displ(i)
             data=strrep(portfolio_filler,'[num]',Image(i));
@@ -65,7 +79,15 @@ function MomWebsite
         end
     end
         
-    fprintf(fid, '%s', portfolio_2);
+    fprintf(fid, '%s', portfolio_2a);
+    
+    for i = [2:length(U_tags)]
+    	data=strrep(portfolio_2filler,'[tag]',U_tags(i));
+        fprintf(fid, '%s', data);
+    end
+    
+    fprintf(fid, '%s', portfolio_2b);
+    
     fclose(fid);
     disp('Portfolio Created')
     %% creates slideshow file

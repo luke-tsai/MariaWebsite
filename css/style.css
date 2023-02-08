@@ -484,6 +484,27 @@ ol {
 	padding: 25px 0;
 }
 
+.home-header {
+	padding-top: 15px;
+	padding-bottom: 27px;
+	position: relative;
+	z-index: 99;
+	text-align: center;
+}
+.home-logo {
+	display: block;
+	float: center;
+	padding: 50px;
+}
+.home-links {
+	display: block;
+	float: center;
+	font-size: 18px;
+	color: #121212;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 50px 0px;
+}
 .header-controls {
 	float: right;
 	display: block;

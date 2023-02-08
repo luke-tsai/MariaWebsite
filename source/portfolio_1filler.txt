@@ -1,0 +1,9 @@
+<button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-[tag]">[tag]</button>

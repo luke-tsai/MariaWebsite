@@ -1,0 +1,4 @@
+
+        $('.enable-[tag]').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.[tag]' });
+        });

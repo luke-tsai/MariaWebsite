@@ -1,0 +1,7 @@
+			</div>
+			<script>
+				$('#mygallery').justifiedGallery({
+					randomize : true,
+					rowHeight : 200
+
+				});
