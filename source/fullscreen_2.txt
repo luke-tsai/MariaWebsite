@@ -29,9 +29,12 @@ function carousel() {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
+  myIndex=Math.floor(Math.random() * x.length);
+  x[myIndex].style.display = "block";
+
+  //myIndex++;
+  //if (myIndex > x.length) {myIndex = 1}
+  //x[myIndex-1].style.display = "block";
   setTimeout(carousel, 30000);
 }
 </script>

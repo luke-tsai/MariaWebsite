@@ -9,17 +9,17 @@ function MomWebsite
     [Image,Title,Date,Dimensions,Price,Display,Feature,Tags] = importfile([fileloc,'drive_export\Maria Photos.xlsx']);
     [Description,Awards] = importabout([fileloc,'drive_export\Maria Photos.xlsx']);
 
-    about_1=fileread([fileloc,'source\v2\about_1.txt']);
-    about_2=fileread([fileloc,'source\v2\about_2.txt']);
-    about_3=fileread([fileloc,'source\v2\about_3.txt']);
+    about_1=fileread([fileloc,'source\about_1.txt']);
+    about_2=fileread([fileloc,'source\about_2.txt']);
+    about_3=fileread([fileloc,'source\about_3.txt']);
     
-    slideshow_1=fileread([fileloc,'source\v2\fullscreen_1.txt']);
-    slideshow_2=fileread([fileloc,'source\v2\fullscreen_2.txt']);
-    slideshow_filler=fileread([fileloc,'source\v2\fullscreen_filler.txt']);
+    slideshow_1=fileread([fileloc,'source\fullscreen_1.txt']);
+    slideshow_2=fileread([fileloc,'source\fullscreen_2.txt']);
+    slideshow_filler=fileread([fileloc,'source\fullscreen_filler.txt']);
     
-    portfolio_1=fileread([fileloc,'source\v2\portfolio_1.txt']);
-    portfolio_2=fileread([fileloc,'source\v2\portfolio_2.txt']);
-    portfolio_filler=fileread([fileloc,'source\v2\portfolio_filler.txt']);
+    portfolio_1=fileread([fileloc,'source\portfolio_1.txt']);
+    portfolio_2=fileread([fileloc,'source\portfolio_2.txt']);
+    portfolio_filler=fileread([fileloc,'source\portfolio_filler.txt']);
     
     portfolio_file=[fileloc,'portfolio.html'];
     slideshow_file=[fileloc,'fullscreen.html'];

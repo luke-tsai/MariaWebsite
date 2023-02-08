@@ -2,47 +2,62 @@ function MomWebsite
     clc
     
     %% imports tidbits
-    fileloc='C:\Users\ltsai\Documents\Google Drive\Maria Painting fulls\Website\';
+    % INSTRUCTIONS:
+    % export google drive and add to the folder drvie_export
+    fileloc='C:\Users\ltsai\Documents\Personal\Mom Website\Website\';
+
+    [Image,Title,Date,Dimensions,Price,Display,Feature,Tags] = importfile([fileloc,'drive_export\Maria Photos.xlsx']);
+    [Description,Awards] = importabout([fileloc,'drive_export\Maria Photos.xlsx']);
+
+    about_1=fileread([fileloc,'source\v2\about_1.txt']);
+    about_2=fileread([fileloc,'source\v2\about_2.txt']);
+    about_3=fileread([fileloc,'source\v2\about_3.txt']);
     
-    [Image,Dimensions,Title,Date,Price,Display,Feature,Tag1,Tag2,Tag3,Tag4,A,B,C,D] = importfile([fileloc,'Website Script\PaintingData.xlsx']);
+    slideshow_1=fileread([fileloc,'source\v2\fullscreen_1.txt']);
+    slideshow_2=fileread([fileloc,'source\v2\fullscreen_2.txt']);
+    slideshow_filler=fileread([fileloc,'source\v2\fullscreen_filler.txt']);
     
-    header=fileread([fileloc,'Website Script\src\Header.txt']);
-    p1header=fileread([fileloc,'\Website Script\src\p1_Header2.txt']);
-    p1body=fileread([fileloc,'Website Script\src\p1_Body2.txt']);
-    p1footer=fileread([fileloc,'Website Script\src\p1_footer.txt']);
+    portfolio_1=fileread([fileloc,'source\v2\portfolio_1.txt']);
+    portfolio_2=fileread([fileloc,'source\v2\portfolio_2.txt']);
+    portfolio_filler=fileread([fileloc,'source\v2\portfolio_filler.txt']);
     
-    p2header=fileread([fileloc,'Website Script\src\p2_Header.txt']);
-    p2body=fileread([fileloc,'Website Script\src\p2_Body.txt']);
-    pfooter=fileread([fileloc,'Website Script\src\p_Footer.txt']);
-    
-    iheader=fileread([fileloc,'Website Script\src\i_Header.txt']);
-    ibody=fileread([fileloc,'Website Script\src\i_Body.txt']);
-    ibody2=fileread([fileloc,'Website Script\src\i_Body2.txt']);
-    ifooter1=fileread([fileloc,'Website Script\src\i_Footer1.txt']);
-    ifooter2=fileread([fileloc,'Website Script\src\i_Footer2.txt']);
-    
-    footer=fileread([fileloc,'Website Script\src\Footer.txt']);
-    p1file=[fileloc,'Website\portfolio.html'];
-%     p2file=[fileloc,'Website\portfolio-1.html'];
-    ifile=[fileloc,'Website\index.html'];
-    
-    bio=fileread([fileloc,'Website Script\Biography.txt']);
+    portfolio_file=[fileloc,'portfolio.html'];
+    slideshow_file=[fileloc,'fullscreen.html'];
+    about_file=[fileloc,'about.html'];
     
     %converts display & feature to binary
     Displ = Display == 'Yes';
     Feat = Feature == 'Yes';
-    Tags=join([Tag1,Tag2,Tag3,Tag4]);
-    
-    %% creates portfolio 1 file
-    fid = fopen(p1file,'w');
-    fprintf(fid, '%s', header);
+    disp('Files Loaded')
+    %% creates images
+    for i = [2:length(Image)]
+        if Image(i)==""
+        else
+            
+            if exist(fullfile(fileloc,'img\portfolio\',char(Image(i))))
+                disp([i,Image(i),'Already Loaded'])
+            else
+                disp([i,Image(i),'Loading...'])
+                img_src=fullfile(fileloc,'drive_export\Maria Photo Upload (File responses)\Select the photo to be uploaded. (File responses)\',char(Image(i)))
+                img_full=imread(img_src);
+                [h,w]=size(img_full);
+            
+                img_scaled=imresize(img_full,300/h);
+                imwrite(img_scaled,fullfile(fileloc,'img\thumbnails\',char(Image(i))));
+                copyfile(img_src,fullfile(fileloc,'img\portfolio\',char(Image(i))));
+            end
+        end
+    end
+    disp('Images Copied')
+    %% creates portfolio file
+    fid = fopen(portfolio_file,'w');
+    fprintf(fid, '%s', portfolio_1);
     fclose(fid);
     
-    fid = fopen(p1file,'a');
-    fprintf(fid, '%s', p1header);
-    for i = [1:max(Image)]
+    fid = fopen(portfolio_file,'a');
+    for i = [1:length(Image)]
         if Displ(i)
-            data=strrep(p1body,'[num]',num2str(Image(i)));
+            data=strrep(portfolio_filler,'[num]',Image(i));
             data=strrep(data,'[title]',Title(i));
             data=strrep(data,'[tags]',Tags(i));
             data=strrep(data,'[size]',strrep(Dimensions(i),'"','&#8243'));
@@ -50,98 +65,80 @@ function MomWebsite
         end
     end
         
-    fprintf(fid, '%s', p1footer);
+    fprintf(fid, '%s', portfolio_2);
+    fclose(fid);
+    disp('Portfolio Created')
+    %% creates slideshow file
+    fid = fopen(slideshow_file,'w');
+    fprintf(fid, '%s', slideshow_1);
     fclose(fid);
     
-%     %% creates portfolio 2 file
-% 
-%     fid = fopen(p2file,'w');
-%     fprintf(fid, '%s', header);
-%     fclose(fid);
-%     
-%     fid = fopen(p2file,'a');
-%     fprintf(fid, '%s', p2header);
-%     for i = [1:max(Image)]
-%         if Displ(i)
-%             data=strrep(p2body,'[num]',num2str(Image(i)));
-%             data=strrep(data,'[tags]',Tags(i));
-%             data=strrep(data,'[title]',Title(i));
-%             data=strrep(data,'[subtitle]',Dimensions(i));
-%             fprintf(fid, '%s', data);
-%         end
-%     end
-%         
-%     fprintf(fid, '%s', pfooter);
-%     fprintf(fid, '%s', footer);
-%     fclose(fid);
-%     
-    %% creates index file
-
-    fid = fopen(ifile,'w');
-    fprintf(fid, '%s', header);
-    fclose(fid);
-    
-    fid = fopen(ifile,'a');
-    fprintf(fid, '%s', iheader);
-    
-    featured=find(Feat);
-    featured=featured(randperm(length(featured)));
-    
-    for i = 1:3
-        for j=1:7
-            info=imfinfo([fileloc,'Website\img\portfolio\tn_',num2str(featured((i-1)*7+j)),'.jpg']);
-            data=strrep(ibody,'[num]',num2str(Image(featured((i-1)*7+j))));
-            data=strrep(data,'[title]',Title(featured((i-1)*7+j)));
-            data=strrep(data,'[size]',strrep(Dimensions(featured((i-1)*7+j)),'"','&#8243'));
-            data=strrep(data,'[wid]',num2str(info.Width));
+    fid = fopen(slideshow_file,'a');
+    for i = [1:length(Image)]
+        if Feat(i)
+            data=strrep(slideshow_filler,'[num]',Image(i));
             fprintf(fid, '%s', data);
         end
-        if ismember(i,[1,2])
-            fprintf(fid, '%s', ibody2);
-        end
     end
+        
+    fprintf(fid, '%s', slideshow_2);
+    fclose(fid);
+    disp('Slideshow Created')
     
-    biography=char(strsplit(bio,{char(13),char(10)},'CollapseDelimiters',true));
-    %%close out
-    fprintf(fid, '%s', ifooter1);
-    for i=1:size(biography,1)
-        fprintf(fid, '%s', '<p>');
-        fprintf(fid, '%s', biography(i,:));
-        fprintf(fid, '%s', '</p>');
-    end
-    fprintf(fid, '%s', ifooter2);
-    fprintf(fid, '%s', footer);
+    %% creates about file
+    fid = fopen(about_file,'w');
+    fprintf(fid, '%s', about_1);
     fclose(fid);
     
+    fid = fopen(about_file,'a');
+    for i = [2:length(Description)]
+        if Description(i)==""
+        else
+            disp([i,Description(i)])
+            fprintf(fid, '%s', '<p>');
+            fprintf(fid, '%s', Description(i));
+            fprintf(fid, '%s', '</p>');
+        end
+    end
+    fprintf(fid, '%s', about_2);
+    
+    for i = [2:length(Awards)]
+        if Awards(i)==""
+        else
+            disp([i,Awards(i)])
+            fprintf(fid, '%s', '<li>');
+            fprintf(fid, '%s', Awards(i));
+            fprintf(fid, '%s', '</li>');
+        end
+    end
+    fprintf(fid, '%s', about_3);
+
+    fclose(fid);
     disp("Done")
 end
 
-
-function [Image,Dimensions,Title,Date,Price,Display,Feature,Tag1,Tag2,Tag3,Tag4,A,B,C,D] = importfile(workbookFile,sheetName,startRow,endRow)
+function [Selectthephototobeuploaded,Title,DatePainted,DimensionsWxD,Price,DisplayinPortfolio,FeatureinSlideshow,Tags] = importfile(workbookFile,sheetName,startRow,endRow)
 %IMPORTFILE Import data from a spreadsheet
-%   [Image,Dimensions,Title,Date,Price,Display,Feature23selectedof21,Tag1,Tag2,Tag3,Tag4,A,B,C,D]
+%   [Selectthephototobeuploaded,Title,DatePainted,DimensionsWxD,Price,DisplayinPortfolio,FeatureinSlideshow,Tags]
 %   = IMPORTFILE(FILE) reads data from the first worksheet in the Microsoft
 %   Excel spreadsheet file named FILE and returns the data as column
 %   vectors.
 %
-%   [Image,Dimensions,Title,Date,Price,Display,Feature23selectedof21,Tag1,Tag2,Tag3,Tag4,A,B,C,D]
+%   [Selectthephototobeuploaded,Title,DatePainted,DimensionsWxD,Price,DisplayinPortfolio,FeatureinSlideshow,Tags]
 %   = IMPORTFILE(FILE,SHEET) reads from the specified worksheet.
 %
-%   [Image,Dimensions,Title,Date,Price,Display,Feature23selectedof21,Tag1,Tag2,Tag3,Tag4,A,B,C,D]
+%   [Selectthephototobeuploaded,Title,DatePainted,DimensionsWxD,Price,DisplayinPortfolio,FeatureinSlideshow,Tags]
 %   = IMPORTFILE(FILE,SHEET,STARTROW,ENDROW) reads from the specified
 %   worksheet for the specified row interval(s). Specify STARTROW and
 %   ENDROW as a pair of scalars or vectors of matching size for
 %   dis-contiguous row intervals. To read to the end of the file specify an
-%   ENDROW of inf.
-%
-%	Non-numeric cells are replaced with: NaN
-%
+%   ENDROW of inf.%
 % Example:
-%   [Image,Dimensions,Title,Date,Price,Display,Feature23selectedof21,Tag1,Tag2,Tag3,Tag4,A,B,C,D] = importfile('PaintingData.xlsx','Sheet1',1,68);
+%   [Selectthephototobeuploaded,Title,DatePainted,DimensionsWxD,Price,DisplayinPortfolio,FeatureinSlideshow,Tags] = importfile('Maria Photos.xlsx','Form Responses 1',1,3);
 %
 %   See also XLSREAD.
 
-% Auto-generated by MATLAB on 2020/08/17 10:52:28
+% Auto-generated by MATLAB on 2023/02/07 14:27:49
 
 %% Input handling
 
@@ -152,45 +149,76 @@ end
 
 % If row start and end points are not specified, define defaults
 if nargin <= 3
-    startRow = 2;
-    endRow = 5000;
+    startRow = 1;
+    endRow = 6000;
 end
 
 %% Import the data
-[~, ~, raw] = xlsread(workbookFile, sheetName, sprintf('A%d:O%d',startRow(1),endRow(1)));
+[~, ~, raw] = xlsread(workbookFile, sheetName, sprintf('B%d:I%d',startRow(1),endRow(1)));
 for block=2:length(startRow)
-    [~, ~, tmpRawBlock] = xlsread(workbookFile, sheetName, sprintf('A%d:O%d',startRow(block),endRow(block)));
+    [~, ~, tmpRawBlock] = xlsread(workbookFile, sheetName, sprintf('B%d:I%d',startRow(block),endRow(block)));
     raw = [raw;tmpRawBlock]; %#ok<AGROW>
 end
-raw(cellfun(@(x) ~isempty(x) && isnumeric(x) && isnan(x),raw)) = {''};
-stringVectors = string(raw(:,[2,3,5,6,7,8,9,10,11,12,13,14,15]));
+stringVectors = string(raw(:,[1,2,3,4,5,6,7,8]));
 stringVectors(ismissing(stringVectors)) = '';
-raw = raw(:,[1,4]);
-
-%% Replace non-numeric cells with NaN
-R = cellfun(@(x) ~isnumeric(x) && ~islogical(x),raw); % Find non-numeric cells
-raw(R) = {NaN}; % Replace non-numeric cells
-
-%% Create output variable
-I = cellfun(@(x) ischar(x), raw);
-raw(I) = {NaN};
-data = reshape([raw{:}],size(raw));
 
 %% Allocate imported array to column variable names
-Image = data(:,1);
-Dimensions = stringVectors(:,1);
+Selectthephototobeuploaded = stringVectors(:,1);
 Title = stringVectors(:,2);
-Date = data(:,2);
-Price = stringVectors(:,3);
-Display = categorical(stringVectors(:,4));
-Feature = categorical(stringVectors(:,5));
-Tag1 = stringVectors(:,6);
-Tag2 = stringVectors(:,7);
-Tag3 = stringVectors(:,8);
-Tag4 = stringVectors(:,9);
-A = stringVectors(:,10);
-B = stringVectors(:,11);
-C = stringVectors(:,12);
-D = stringVectors(:,13);
+DatePainted = stringVectors(:,3);
+DimensionsWxD = stringVectors(:,4);
+Price = stringVectors(:,5);
+DisplayinPortfolio = stringVectors(:,6);
+FeatureinSlideshow = stringVectors(:,7);
+Tags = stringVectors(:,8);
+
+end
+
+function [Description,Awards] = importabout(workbookFile,sheetName,startRow,endRow)
+%IMPORTFILE Import data from a spreadsheet
+%   [Description,Awards] = IMPORTFILE(FILE) reads data from the first
+%   worksheet in the Microsoft Excel spreadsheet file named FILE and
+%   returns the data as column vectors.
+%
+%   [Description,Awards] = IMPORTFILE(FILE,SHEET) reads from the specified
+%   worksheet.
+%
+%   [Description,Awards] = IMPORTFILE(FILE,SHEET,STARTROW,ENDROW) reads
+%   from the specified worksheet for the specified row interval(s). Specify
+%   STARTROW and ENDROW as a pair of scalars or vectors of matching size
+%   for dis-contiguous row intervals. To read to the end of the file
+%   specify an ENDROW of inf.%
+% Example:
+%   [Description,Awards] = importfile('Maria Photos.xlsx','About',1,6);
+%
+%   See also XLSREAD.
+
+% Auto-generated by MATLAB on 2023/02/07 14:31:41
+
+%% Input handling
+
+% If no sheet is specified, read first sheet
+if nargin == 1 || isempty(sheetName)
+    sheetName = 2;
+end
+
+% If row start and end points are not specified, define defaults
+if nargin <= 3
+    startRow = 1;
+    endRow = 50;
+end
+
+%% Import the data
+[~, ~, raw] = xlsread(workbookFile, sheetName, sprintf('A%d:B%d',startRow(1),endRow(1)));
+for block=2:length(startRow)
+    [~, ~, tmpRawBlock] = xlsread(workbookFile, sheetName, sprintf('A%d:B%d',startRow(block),endRow(block)));
+    raw = [raw;tmpRawBlock]; %#ok<AGROW>
+end
+stringVectors = string(raw(:,[1,2]));
+stringVectors(ismissing(stringVectors)) = '';
+
+%% Allocate imported array to column variable names
+Description = stringVectors(:,1);
+Awards = stringVectors(:,2);
 
 end
