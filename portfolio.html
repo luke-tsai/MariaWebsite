@@ -118,23 +118,7 @@
 	text-transform: uppercase;
 	margin-left: 10px;
 	margin-right: 10px;
-	cursor: pointer;" class="enable-Still">Still</button><button style="font-size: 14px;
-	background: transparent;
-	border: none;
-	color: #212121;
-	font-weight: 500;
-	text-transform: uppercase;
-	margin-left: 10px;
-	margin-right: 10px;
-	cursor: pointer;" class="enable-brush">brush</button><button style="font-size: 14px;
-	background: transparent;
-	border: none;
-	color: #212121;
-	font-weight: 500;
-	text-transform: uppercase;
-	margin-left: 10px;
-	margin-right: 10px;
-	cursor: pointer;" class="enable-painting">painting</button>
+	cursor: pointer;" class="enable-Still">Still</button>
         <button style="font-size: 14px;
 	background: transparent;
 	border: none;
@@ -146,9 +130,6 @@
 	cursor: pointer;" class="enable-all">All</button>
     </div>
 			<div id="mygallery" class="justified-gallery">
-				<a href="img/portfolio/19 - Maria Tsai.jpg" title="Baskets, 20&#8243 x 20&#8243" class="img-popup Oil Still">
-					<img alt="Baskets" src="img/thumbnails/19 - Maria Tsai.jpg">
-				</a>
 				<a href="img/portfolio/20230206_174840 - Maria Tsai.jpg" title="Copy cats, 35&#8243 x 13&#8243" class="img-popup Oil Portrait Landscape">
 					<img alt="Copy cats" src="img/thumbnails/20230206_174840 - Maria Tsai.jpg">
 				</a>
@@ -257,7 +238,7 @@
 				<a href="img/portfolio/59 - Maria Tsai.jpg" title="Determination, 14x11" class="img-popup Acrylic">
 					<img alt="Determination" src="img/thumbnails/59 - Maria Tsai.jpg">
 				</a>
-				<a href="img/portfolio/58 - Maria Tsai.jpg" title="Horse, 12x12" class="img-popup Chinese brush painting">
+				<a href="img/portfolio/58 - Maria Tsai.jpg" title="Horse, 12x12" class="img-popup Chinese">
 					<img alt="Horse" src="img/thumbnails/58 - Maria Tsai.jpg">
 				</a>
 				<a href="img/portfolio/33 - Maria Tsai.jpg" title="Wanderlust, 24x12" class="img-popup Oil Landscape">
@@ -361,6 +342,15 @@
 				</a>
 				<a href="img/portfolio/20230209_133957 - Maria Tsai.jpg" title="Orange, 6x6" class="img-popup Oil Still">
 					<img alt="Orange" src="img/thumbnails/20230209_133957 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/17 - Maria Tsai.jpg" title="Rose, 20x16" class="img-popup Oil Still">
+					<img alt="Rose" src="img/thumbnails/17 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/43 - Maria Tsai.jpg" title="The journey beyond, 24x12" class="img-popup Oil Portrait">
+					<img alt="The journey beyond" src="img/thumbnails/43 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/50 - Maria Tsai.jpg" title="My morning exercise , 24x12" class="img-popup Oil Landscape">
+					<img alt="My morning exercise " src="img/thumbnails/50 - Maria Tsai.jpg">
 				</a>			</div>
 			<script>
 				$('#mygallery').justifiedGallery({
@@ -399,14 +389,6 @@
 
         $('.enable-Still').click(function () {
             $("#mygallery").justifiedGallery({ filter: '.Still' });
-        });
-
-        $('.enable-brush').click(function () {
-            $("#mygallery").justifiedGallery({ filter: '.brush' });
-        });
-
-        $('.enable-painting').click(function () {
-            $("#mygallery").justifiedGallery({ filter: '.painting' });
         });
 
         $('.enable-all').click(function () {
