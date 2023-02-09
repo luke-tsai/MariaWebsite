@@ -12,7 +12,6 @@
 
 	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
-	<link rel="stylesheet" href="css/frames.css"/>
 
 
 	<!-- Main Stylesheets -->
@@ -21,7 +20,7 @@
 	<style>
 		* {margin:0;padding:0;}
         .imgbox {display: grid;height: 100%;}
-        .center{max-width: 75%;max-height: 75vh;margin:0;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+        .center{max-width: 100%;max-height: 100vh;margin:0;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
         .fade{animation:fading 30s infinite}@keyframes fading{0%{opacity:0}5%{opacity:1}95%{opacity:1}100%{opacity:0}}
 		.featured {display:none;}
 	</style>
@@ -31,7 +30,8 @@
 	<audio id="myAudio" >
 		<source src="music/background.mp3" type="audio/mpeg">
 	</audio>
-	<img class="featured fade center mat" src="img/portfolio/19 - Maria Tsai.jpg">
+<div class="imgbox" onclick="openFullscreen();">
+  <img class="featured fade center" src="img/portfolio/19 - Maria Tsai.jpg">
   <img class="featured fade center" src="img/portfolio/20230206_174840 - Maria Tsai.jpg">
   <img class="featured fade center" src="img/portfolio/20230206_174720 - Maria Tsai.jpg">
   <img class="featured fade center" src="img/portfolio/20230119_140805 - Maria Tsai.jpg">
@@ -57,7 +57,28 @@
   <img class="featured fade center" src="img/portfolio/12 - Maria Tsai.jpg">
   <img class="featured fade center" src="img/portfolio/23 - Maria Tsai.jpg">
   <img class="featured fade center" src="img/portfolio/36 - Maria Tsai.jpg">
-  <img class="featured fade center" src="img/portfolio/27 - Maria Tsai.jpg"></div>
+  <img class="featured fade center" src="img/portfolio/27 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/61 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/33 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20181206_122139~2 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20190313_105614 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/19 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230209_114645 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230209_114438 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20171203_150420 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/45 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/2 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/5 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/4 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/42 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/41 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/39 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/40 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/48 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/49 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/72 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230209_134005 - Maria Tsai.jpg">
+  <img class="featured fade center" src="img/portfolio/20230209_133957 - Maria Tsai.jpg"></div>
 
 
 <script>
@@ -90,12 +111,13 @@ function carousel() {
   }
   myIndex=Math.floor(Math.random() * x.length);
   x[myIndex].classList.add("mat");
-  color=Math.floor(Math.random() * 3);
+  color=Math.floor(Math.random() * 4);
   console.log(color)
   switch(color){
-    case 0:x[myIndex].style.backgroundImage = "url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cardboard.jpg')";break;
-    case 1:x[myIndex].style.backgroundImage = "url('https://img.freepik.com/free-photo/white-paper-texture_1194-2324.jpg')";break;
-    case 2:x[myIndex].style.backgroundImage = "url('https://img.freepik.com/free-photo/gray-color-cotton-texture-surface-background_74190-13729.jpg')";break;}
+    case 0:x[myIndex].style.backgroundImage = "url('1.jpg')";break;
+    case 1:x[myIndex].style.backgroundImage = "url('2.jpg')";break;
+    case 2:x[myIndex].style.backgroundImage = "url('3.jpg')";break;
+    case 3:x[myIndex].style.backgroundImage = "url('4.jpg')";break;}
   x[myIndex].style.display = "block";
 
   //myIndex++;

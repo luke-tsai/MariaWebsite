@@ -2,7 +2,9 @@
 img.mat {
   height: auto;
   display: block;
-  padding: 10%;
+  max-width: calc(90% - 35px) !important;
+  max-height: calc(90vh - 50px) !important;
+  padding: 5%;
   background-color: #A67B5B;
   background-repeat: no-repeat;
   background-size: 100% 100%;
