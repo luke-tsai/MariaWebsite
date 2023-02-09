@@ -30,14 +30,12 @@ function carousel() {
     x[i].style.display = "none";
   }
   myIndex=Math.floor(Math.random() * x.length);
-  x[myIndex].classList.add("mat");
   color=Math.floor(Math.random() * 4);
-  console.log(color)
   switch(color){
-    case 0:x[myIndex].style.backgroundImage = "url('1.jpg')";break;
-    case 1:x[myIndex].style.backgroundImage = "url('2.jpg')";break;
-    case 2:x[myIndex].style.backgroundImage = "url('3.jpg')";break;
-    case 3:x[myIndex].style.backgroundImage = "url('4.jpg')";break;}
+    case 0:x[myIndex].style.backgroundImage = "url('img/fabric/1.jpg')";break;
+    case 1:x[myIndex].style.backgroundImage = "url('img/fabric/2.jpg')";break;
+    case 2:x[myIndex].style.backgroundImage = "url('img/fabric/3.jpg')";break;
+    case 3:x[myIndex].style.backgroundImage = "url('img/fabric/4.jpg')";break;}
   x[myIndex].style.display = "block";
 
   //myIndex++;

@@ -1,2 +1,2 @@
 
-  <img class="featured fade center" src="img/portfolio/[num]">
+  <img class="featured fade center mat" src="img/portfolio/[num]">

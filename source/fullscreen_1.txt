@@ -16,6 +16,8 @@
 
 	<!-- Main Stylesheets -->
 	<body style="background-color:black;">
+	<link rel="stylesheet" href="css/frames.css"/>
+
 
 	<style>
 		* {margin:0;padding:0;}
