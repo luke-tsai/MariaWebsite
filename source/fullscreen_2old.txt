@@ -1,0 +1,49 @@
+</div>
+
+
+<script>
+var myIndex = 0;
+
+carousel();
+
+var elem = document.documentElement;
+var mus = document.getElementById("myAudio");
+
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+  mus.loop=true;
+  mus.load();
+  mus.play();
+
+}
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("featured");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex=Math.floor(Math.random() * x.length);
+  color=Math.floor(Math.random() * 4);
+  switch(color){
+    case 0:x[myIndex].style.backgroundImage = "url('img/fabric/1.jpg')";break;
+    case 1:x[myIndex].style.backgroundImage = "url('img/fabric/2.jpg')";break;
+    case 2:x[myIndex].style.backgroundImage = "url('img/fabric/3.jpg')";break;
+    case 3:x[myIndex].style.backgroundImage = "url('img/fabric/4.jpg')";break;}
+  x[myIndex].style.display = "block";
+
+  //myIndex++;
+  //if (myIndex > x.length) {myIndex = 1}
+  //x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 30000);
+}
+</script>
+
+</body>
+</html>

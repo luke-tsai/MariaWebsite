@@ -85,11 +85,11 @@
 
 <script>
 var myIndex = 0;
-
-carousel();
-
 var elem = document.documentElement;
 var mus = document.getElementById("myAudio");
+var x = document.getElementsByClassName("featured");
+var arr = shuffle(Array.from({length: x.length}, (_, index) => index));
+carousel();
 
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -102,27 +102,38 @@ function openFullscreen() {
   mus.loop=true;
   mus.load();
   mus.play();
+}
 
+function shuffle(array) {
+    var i = array.length,
+        j = 0,
+        temp;
+
+    while (i--) {
+        j = Math.floor(Math.random() * (i+1));
+        // swap randomly chosen element with current element
+        temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
 }
 
 function carousel() {
-  var i;
-  var x = document.getElementsByClassName("featured");
+  myIndex++;
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  myIndex=Math.floor(Math.random() * x.length);
   color=Math.floor(Math.random() * 4);
   switch(color){
-    case 0:x[myIndex].style.backgroundImage = "url('img/fabric/1.jpg')";break;
-    case 1:x[myIndex].style.backgroundImage = "url('img/fabric/2.jpg')";break;
-    case 2:x[myIndex].style.backgroundImage = "url('img/fabric/3.jpg')";break;
-    case 3:x[myIndex].style.backgroundImage = "url('img/fabric/4.jpg')";break;}
-  x[myIndex].style.display = "block";
+    case 0:x[arr[myIndex-1]].style.backgroundImage = "url('img/fabric/1.jpg')";break;
+    case 1:x[arr[myIndex-1]].style.backgroundImage = "url('img/fabric/2.jpg')";break;
+    case 2:x[arr[myIndex-1]].style.backgroundImage = "url('img/fabric/3.jpg')";break;
+    case 3:x[arr[myIndex-1]].style.backgroundImage = "url('img/fabric/4.jpg')";break;}
 
-  //myIndex++;
-  //if (myIndex > x.length) {myIndex = 1}
-  //x[myIndex-1].style.display = "block";
+
+  x[arr[myIndex-1]].style.display = "block";
+  if (myIndex > x.length-1) {myIndex = 0}
   setTimeout(carousel, 30000);
 }
 </script>
