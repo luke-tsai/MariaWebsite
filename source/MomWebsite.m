@@ -4,7 +4,7 @@ function MomWebsite
     %% imports tidbits
     % INSTRUCTIONS:
     % export google drive and add to the folder drvie_export
-    fileloc='C:\Users\ltsai\Documents\Personal\Mom Website\Website\';
+    fileloc='C:\Users\lukes\Documents\Github\MomWebsite\';
 
     [Image,Title,Date,Dimensions,Price,Display,Feature,Tags] = importfile([fileloc,'drive_export\Maria Photos.xlsx']);
     [Description,Awards] = importabout([fileloc,'drive_export\Maria Photos.xlsx']);
@@ -25,7 +25,7 @@ function MomWebsite
     portfolio_1filler=fileread([fileloc,'source\portfolio_1filler.txt']);
     portfolio_2filler=fileread([fileloc,'source\portfolio_2filler.txt']);
     
-    portfolio_file=[fileloc,'portfolio.html'];
+    portfolio_file=[fileloc,'index.html'];
     slideshow_file=[fileloc,'fullscreen.html'];
     about_file=[fileloc,'about.html'];
     
@@ -35,9 +35,8 @@ function MomWebsite
     disp('Files Loaded')
     %% creates images
     for i = [2:length(Image)]
-        if Image(i)==""
-        else
-            
+%         if (Image(i) == "")
+%         else
             if exist(fullfile(fileloc,'img\portfolio\',char(Image(i))))
                 disp([i,Image(i),'Already Loaded'])
             else
@@ -50,7 +49,7 @@ function MomWebsite
                 imwrite(img_scaled,fullfile(fileloc,'img\thumbnails\',char(Image(i))));
                 copyfile(img_src,fullfile(fileloc,'img\portfolio\',char(Image(i))));
             end
-        end
+%         end
     end
     disp('Images Copied')
     %% creates portfolio file
@@ -62,7 +61,7 @@ function MomWebsite
     
     fid = fopen(portfolio_file,'a');
     
-    for i = [2:length(U_tags)]
+    for i = [3:length(U_tags)]
     	data=strrep(portfolio_1filler,'[tag]',U_tags(i));
         fprintf(fid, '%s', data);
     end
@@ -81,7 +80,7 @@ function MomWebsite
         
     fprintf(fid, '%s', portfolio_2a);
     
-    for i = [2:length(U_tags)]
+    for i = [3:length(U_tags)]
     	data=strrep(portfolio_2filler,'[tag]',U_tags(i));
         fprintf(fid, '%s', data);
     end
@@ -107,36 +106,36 @@ function MomWebsite
     fclose(fid);
     disp('Slideshow Created')
     
-    %% creates about file
-    fid = fopen(about_file,'w');
-    fprintf(fid, '%s', about_1);
-    fclose(fid);
-    
-    fid = fopen(about_file,'a');
-    for i = [2:length(Description)]
-        if Description(i)==""
-        else
-            disp([i,Description(i)])
-            fprintf(fid, '%s', '<p>');
-            fprintf(fid, '%s', Description(i));
-            fprintf(fid, '%s', '</p>');
-        end
-    end
-    fprintf(fid, '%s', about_2);
-    
-    for i = [2:length(Awards)]
-        if Awards(i)==""
-        else
-            disp([i,Awards(i)])
-            fprintf(fid, '%s', '<li>');
-            fprintf(fid, '%s', Awards(i));
-            fprintf(fid, '%s', '</li>');
-        end
-    end
-    fprintf(fid, '%s', about_3);
-
-    fclose(fid);
-    disp("Done")
+     %% creates about file
+%     fid = fopen(about_file,'w');
+%     fprintf(fid, '%s', about_1);
+%     fclose(fid);
+%     
+%     fid = fopen(about_file,'a');
+%     for i = [2:length(Description)]
+% %         if Description(i)==""
+% %         else
+%             disp([i,Description(i)])
+%             fprintf(fid, '%s', '<p>');
+%             fprintf(fid, '%s', Description(i));
+%             fprintf(fid, '%s', '</p>');
+% %         end
+%     end
+%     fprintf(fid, '%s', about_2);
+%     
+%     for i = [2:length(Awards)]
+% %         if Awards(i)==""
+% %         else
+%             disp([i,Awards(i)])
+%             fprintf(fid, '%s', '<li>');
+%             fprintf(fid, '%s', Awards(i));
+%             fprintf(fid, '%s', '</li>');
+% %         end
+%     end
+%     fprintf(fid, '%s', about_3);
+% 
+%     fclose(fid);
+%     disp('Done')
 end
 
 function [Selectthephototobeuploaded,Title,DatePainted,DimensionsWxD,Price,DisplayinPortfolio,FeatureinSlideshow,Tags] = importfile(workbookFile,sheetName,startRow,endRow)

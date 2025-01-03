@@ -1,5 +1,5 @@
 
-        <button style="font-size: 14px;
+        <a href="fullscreen.html"> <button style="font-size: 14px;
 	background: transparent;
 	border: none;
 	color: #212121;
@@ -7,6 +7,6 @@
 	text-transform: uppercase;
 	margin-left: 10px;
 	margin-right: 0px;
-	cursor: pointer;" class="enable-all">All</button>
+	cursor: pointer;" class="enable-all">Slideshow</button></a>
     </div>
 			<div id="mygallery" class="justified-gallery">

@@ -1,8 +1,5 @@
 
-        $('.enable-all').click(function () {
-            $("#mygallery").justifiedGallery({ filter: false });
-        });
-
+        
         $("#mygallery").justifiedGallery();
 			</script>
 <div>

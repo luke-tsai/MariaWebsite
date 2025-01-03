@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zxx">
 <head>
-<head>
-	<title>Maria Tsai</title>
+	<title>Maria Tsai's Portfolio</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="Maria Tsai's Painting Portfolio">
+	<meta name="description" content="Maria Tsai's Portfolio">
 	<meta name="keywords" content="Maria, Tsai, Painting, Portfolio, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-
+	
 	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
 
@@ -23,41 +20,352 @@
 	<link rel="stylesheet" href="css/slicknav.min.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/justifiedGallery.min.css"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="css/style.css"/>
 
-	<style>
-	.featured {display:none;}
-	</style>
-</head>
 
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
 <body>
-    <div id="preloder">
+	<!-- Page Preloder -->
+	<div id="preloder">
 		<div class="loader"></div>
 	</div>
 
-	<!-- Header section  -->
-	<div class="home-header">
-		<a href="index.html" class="home-logo"><img src="img/logo.png" alt="logo"></a>
-		<a href="about.html" class="home-links">About</a>
-		<a href="portfolio.html" class="home-links">Portfolio</a>
-		<a href="fullscreen.html" class="home-links">Slideshow</a>
 
-	</div>
+
+	<!-- Header section  -->
+	<header class="header-section">
+		
+		<a href="index.html" class="site-logo"><img src="img/logo.png" alt="logo"></a> 
+		<!-- <a href="index.html"class="link-page">Return Home</a> -->
+	</header>
+	<div class="clearfix"></div>
 	<!-- Header section end  -->
 
-	<!-- Contact section  -->
-	<section class="elements-section">
-		<div class="container">
-			<!-- element -->
-			<div class="element">
-				</div>
-			</div>
-
-	<!--====== Javascripts & Jquery ======-->
+	
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.justifiedGallery.min.js"></script>
+
+	<!-- Portfolio section  -->
+	<div class="portfolio-section portfolio-filter controls text-center">
+<button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-Animal">Animal</button><button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-Landscape">Landscape</button><button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-Oil">Oil</button><button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-Pastel">Pastel</button><button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-Portrait">Portrait</button><button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;" class="enable-Still">Still</button>
+        <a href="fullscreen.html"> <button style="font-size: 14px;
+	background: transparent;
+	border: none;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-right: 0px;
+	cursor: pointer;" class="enable-all">Slideshow</button></a>
+    </div>
+			<div id="mygallery" class="justified-gallery">
+				<a href="img/portfolio/20241227_140107 - Maria Tsai.jpg" title="Our king is born, 24x30" class="img-popup Oil Portrait">
+					<img alt="Our king is born" src="img/thumbnails/20241227_140107 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20240902_212034 - Maria Tsai.jpg" title="Mocha baby, 8x10" class="img-popup Oil Portrait Animal">
+					<img alt="Mocha baby" src="img/thumbnails/20240902_212034 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20240713_125714 - Maria Tsai.jpg" title="California Meadow, 8x10" class="img-popup Oil Landscape">
+					<img alt="California Meadow" src="img/thumbnails/20240713_125714 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20241227_140257 - Maria Tsai.jpg" title="Sandy beach, 24&#8243 diameter " class="img-popup Oil Landscape">
+					<img alt="Sandy beach" src="img/thumbnails/20241227_140257 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20240827_144651 - Maria Tsai.jpg" title="Baby G, 8x10" class="img-popup Oil Portrait">
+					<img alt="Baby G" src="img/thumbnails/20240827_144651 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20240727_164840 - Maria Tsai.jpg" title="Oh no!, 8x10" class="img-popup Oil Portrait">
+					<img alt="Oh no!" src="img/thumbnails/20240727_164840 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20240802_131952 - Maria Tsai.jpg" title="20 mins practice , 8x10" class="img-popup Oil Portrait">
+					<img alt="20 mins practice " src="img/thumbnails/20240802_131952 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20240410_214630 - Maria Tsai.jpg" title="My favorite place, 24&#8243" class="img-popup Oil Landscape">
+					<img alt="My favorite place" src="img/thumbnails/20240410_214630 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20241227_144157 - Maria Tsai.jpg" title="Self portrait , 12x48" class="img-popup Oil Portrait">
+					<img alt="Self portrait " src="img/thumbnails/20241227_144157 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20240830_172305 - Maria Tsai.jpg" title="Florida sunset, 8x12" class="img-popup Oil Landscape">
+					<img alt="Florida sunset" src="img/thumbnails/20240830_172305 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20240419_120043 - Maria Tsai.jpg" title="Baby momo, 24x24" class="img-popup Oil Portrait">
+					<img alt="Baby momo" src="img/thumbnails/20240419_120043 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20230119_140840 - Maria Tsai.jpg" title="Whisky set, 16&#8243 x 20&#8243" class="img-popup Oil Still">
+					<img alt="Whisky set" src="img/thumbnails/20230119_140840 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20230209_114438 - Maria Tsai.jpg" title="Pour me a glass please, 16x20" class="img-popup Oil Still">
+					<img alt="Pour me a glass please" src="img/thumbnails/20230209_114438 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20230119_140805 - Maria Tsai.jpg" title="Time to relax, 16&#8243 x 20&#8243" class="img-popup Oil Still">
+					<img alt="Time to relax" src="img/thumbnails/20230119_140805 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/123_1(7) - Maria Tsai.jpeg" title="A great beginning , 48&#8243 x 30&#8243" class="img-popup Oil Still Landscape">
+					<img alt="A great beginning " src="img/thumbnails/123_1(7) - Maria Tsai.jpeg">
+				</a>
+				<a href="img/portfolio/20230206_174720 - Maria Tsai.jpg" title="An Arabic man, 16&#8243 x 20&#8243" class="img-popup Oil Portrait">
+					<img alt="An Arabic man" src="img/thumbnails/20230206_174720 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20230206_175016 - Maria Tsai.jpg" title="Wine and grapes, 20&#8243 x 16&#8243" class="img-popup Oil Still">
+					<img alt="Wine and grapes" src="img/thumbnails/20230206_175016 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20220428_131204 - Maria Tsai.jpg" title="Pink, 12&#8243 x 24&#8243" class="img-popup Oil Portrait">
+					<img alt="Pink" src="img/thumbnails/20220428_131204 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/IMG_5922 - Maria Tsai.JPG" title="Heidi, 11&#8243 x 14&#8243" class="img-popup Oil Animal Portrait">
+					<img alt="Heidi" src="img/thumbnails/IMG_5922 - Maria Tsai.JPG">
+				</a>
+				<a href="img/portfolio/69 - Maria Tsai.jpg" title="Sad old man, 12&#8243 x 12&#8243" class="img-popup Oil Portrait">
+					<img alt="Sad old man" src="img/thumbnails/69 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20230206_174840 - Maria Tsai.jpg" title="Copy cats, 35&#8243 x 13&#8243" class="img-popup Oil Portrait">
+					<img alt="Copy cats" src="img/thumbnails/20230206_174840 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/52 - Maria Tsai.jpg" title="Lonely Cypress, 16&#8243 x 24&#8243" class="img-popup Oil Landscape">
+					<img alt="Lonely Cypress" src="img/thumbnails/52 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/51 - Maria Tsai.jpg" title="Happy fish, 14&#8243 x 14&#8243" class="img-popup Oil Animal">
+					<img alt="Happy fish" src="img/thumbnails/51 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/53 - Maria Tsai.jpg" title="Koi fish, 12&#8243 x 12&#8243" class="img-popup Oil Animal">
+					<img alt="Koi fish" src="img/thumbnails/53 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20221121_143151 - Maria Tsai.jpg" title="Fox, 11&#8243 x 14&#8243" class="img-popup Pastel Animal">
+					<img alt="Fox" src="img/thumbnails/20221121_143151 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20221121_143211 - Maria Tsai.jpg" title="Hare, 11&#8243 x 14&#8243" class="img-popup Pastel Animal">
+					<img alt="Hare" src="img/thumbnails/20221121_143211 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/55 - Maria Tsai.jpg" title="Breakfast, 15&#8243 x 15&#8243" class="img-popup Oil Still">
+					<img alt="Breakfast" src="img/thumbnails/55 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/mmexport1631633233698 - Maria Tsai.jpg" title="Our Momo, 10&#8243 x 10&#8243" class="img-popup Oil Animal Portrait">
+					<img alt="Our Momo" src="img/thumbnails/mmexport1631633233698 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/mmexport1676227513436 - Maria Tsai.jpg" title="Koi pond , 48x36" class="img-popup Oil Animal">
+					<img alt="Koi pond " src="img/thumbnails/mmexport1676227513436 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20230209_114645 - Maria Tsai.jpg" title="Albany's winter, 24x24" class="img-popup Oil Landscape">
+					<img alt="Albany's winter" src="img/thumbnails/20230209_114645 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20181206_122139~2 - Maria Tsai.jpg" title="A New Day, 14x11" class="img-popup Oil Landscape">
+					<img alt="A New Day" src="img/thumbnails/20181206_122139~2 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20190313_105614 - Maria Tsai.jpg" title="My model , 12x12" class="img-popup Oil Portrait">
+					<img alt="My model " src="img/thumbnails/20190313_105614 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/54 - Maria Tsai.jpg" title="Drifting away, 26&#8243 x 40&#8243" class="img-popup Oil Landscape">
+					<img alt="Drifting away" src="img/thumbnails/54 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/43 - Maria Tsai.jpg" title="The journey beyond, 24x12" class="img-popup Oil Portrait">
+					<img alt="The journey beyond" src="img/thumbnails/43 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/42 - Maria Tsai.jpg" title="Taj Mahal, 16x20" class="img-popup Oil Landscape">
+					<img alt="Taj Mahal" src="img/thumbnails/42 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/48 - Maria Tsai.jpg" title="Sunset on the beach, 24x12" class="img-popup Oil Landscape">
+					<img alt="Sunset on the beach" src="img/thumbnails/48 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/50 - Maria Tsai.jpg" title="My morning exercise , 24x12" class="img-popup Oil Landscape">
+					<img alt="My morning exercise " src="img/thumbnails/50 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20171203_150420 - Maria Tsai.jpg" title="A peaceful night, 24x12" class="img-popup Oil Landscape">
+					<img alt="A peaceful night" src="img/thumbnails/20171203_150420 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20181201_135715 - Maria Tsai.jpg" title="Scooty, 12x12" class="img-popup Oil Portrait Animal">
+					<img alt="Scooty" src="img/thumbnails/20181201_135715 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/19 - Maria Tsai.jpg" title="Baskets, 37x37" class="img-popup Oil Still">
+					<img alt="Baskets" src="img/thumbnails/19 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/39 - Maria Tsai.jpg" title="Winter blue, 24x24" class="img-popup Oil Landscape">
+					<img alt="Winter blue" src="img/thumbnails/39 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/23 - Maria Tsai.jpg" title="Paris, 16x20" class="img-popup Oil Landscape">
+					<img alt="Paris" src="img/thumbnails/23 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/45 - Maria Tsai.jpg" title="Walden pond, 39x39" class="img-popup Oil Landscape">
+					<img alt="Walden pond" src="img/thumbnails/45 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20230209_133957 - Maria Tsai.jpg" title="Orange, 6x6" class="img-popup Oil Still">
+					<img alt="Orange" src="img/thumbnails/20230209_133957 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20230209_134005 - Maria Tsai.jpg" title="A study of the fruits, 12x28" class="img-popup Oil Still">
+					<img alt="A study of the fruits" src="img/thumbnails/20230209_134005 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/1 - Maria Tsai.jpg" title="Still life, 20x16" class="img-popup Oil Still">
+					<img alt="Still life" src="img/thumbnails/1 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/40 - Maria Tsai.jpg" title="Pasture, 12x24" class="img-popup Oil Landscape">
+					<img alt="Pasture" src="img/thumbnails/40 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/17 - Maria Tsai.jpg" title="Rose, 20x16" class="img-popup Oil Still">
+					<img alt="Rose" src="img/thumbnails/17 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/9 - Maria Tsai.jpg" title="Sandy shore, 14x11" class="img-popup Oil Landscape">
+					<img alt="Sandy shore" src="img/thumbnails/9 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/IMG_5780 - Maria Tsai.jpg" title="A study, 10x8" class="img-popup Oil Landscape">
+					<img alt="A study" src="img/thumbnails/IMG_5780 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/32 - Maria Tsai.jpg" title="Still life, 20x16" class="img-popup Oil Still">
+					<img alt="Still life" src="img/thumbnails/32 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/2 - Maria Tsai.jpg" title="Terabithia, 14x11" class="img-popup Oil Landscape">
+					<img alt="Terabithia" src="img/thumbnails/2 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/20200305_105010 - Maria Tsai.jpg" title="Fishermen's view, 24x12" class="img-popup Oil Landscape">
+					<img alt="Fishermen's view" src="img/thumbnails/20200305_105010 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/56 - Maria Tsai.jpg" title="Apple, 6&#8243 x 6&#8243" class="img-popup Oil Still">
+					<img alt="Apple" src="img/thumbnails/56 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/57 - Maria Tsai.jpg" title="Pears, 6&#8243 x 6&#8243" class="img-popup Oil Still">
+					<img alt="Pears" src="img/thumbnails/57 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/46 - Maria Tsai.jpg" title="Grapes, 14x11" class="img-popup Oil Still">
+					<img alt="Grapes" src="img/thumbnails/46 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/49 - Maria Tsai.jpg" title="A study of still life, 14x11" class="img-popup Oil Still">
+					<img alt="A study of still life" src="img/thumbnails/49 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/58 - Maria Tsai.jpg" title="Horse, 12x12" class="img-popup Oil Animal">
+					<img alt="Horse" src="img/thumbnails/58 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/41 - Maria Tsai.jpg" title="A bowl of cuties, 14x11" class="img-popup Oil Still">
+					<img alt="A bowl of cuties" src="img/thumbnails/41 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/31 - Maria Tsai.jpg" title="Peaceful ride, 24x12" class="img-popup Oil Landscape">
+					<img alt="Peaceful ride" src="img/thumbnails/31 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/27 - Maria Tsai.jpg" title="Italy, 20x16" class="img-popup Oil Landscape">
+					<img alt="Italy" src="img/thumbnails/27 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/10 - Maria Tsai.jpg" title="Christmas Bear, 20x16" class="img-popup Oil Still">
+					<img alt="Christmas Bear" src="img/thumbnails/10 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/12 - Maria Tsai.jpg" title="Eggs, 14x11" class="img-popup Oil Still">
+					<img alt="Eggs" src="img/thumbnails/12 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/30 - Maria Tsai.jpg" title="Rooster, 11x14" class="img-popup Oil Animal Portrait">
+					<img alt="Rooster" src="img/thumbnails/30 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/33 - Maria Tsai.jpg" title="Wanderlust, 24x12" class="img-popup Oil Landscape">
+					<img alt="Wanderlust" src="img/thumbnails/33 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/11 - Maria Tsai.jpg" title="Untitled, 16x20" class="img-popup Oil Landscape">
+					<img alt="Untitled" src="img/thumbnails/11 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/26 - Maria Tsai.jpg" title="Still life, 11x14" class="img-popup Oil Still">
+					<img alt="Still life" src="img/thumbnails/26 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/16 - Maria Tsai.jpg" title="Be still, 11x14" class="img-popup Oil Landscape">
+					<img alt="Be still" src="img/thumbnails/16 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/7 - Maria Tsai.jpg" title="Oyster picker, 11x14" class="img-popup Oil">
+					<img alt="Oyster picker" src="img/thumbnails/7 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/5 - Maria Tsai.jpg" title="Lead me lord, 11x14" class="img-popup Oil Landscape">
+					<img alt="Lead me lord" src="img/thumbnails/5 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/4 - Maria Tsai.jpg" title="Two Onions, 14x11" class="img-popup Oil Still">
+					<img alt="Two Onions" src="img/thumbnails/4 - Maria Tsai.jpg">
+				</a>
+				<a href="img/portfolio/61 - Maria Tsai.jpg" title="Don't Cry, 10x14" class="img-popup Oil Portrait">
+					<img alt="Don't Cry" src="img/thumbnails/61 - Maria Tsai.jpg">
+				</a>			</div>
+			<script>
+				$('#mygallery').justifiedGallery({
+					randomize : false,
+					rowHeight : 200
+
+				});
+
+        $('.enable-Animal').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Animal' });
+        });
+
+        $('.enable-Landscape').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Landscape' });
+        });
+
+        $('.enable-Oil').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Oil' });
+        });
+
+        $('.enable-Pastel').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Pastel' });
+        });
+
+        $('.enable-Portrait').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Portrait' });
+        });
+
+        $('.enable-Still').click(function () {
+            $("#mygallery").justifiedGallery({ filter: '.Still' });
+        });
+
+        
+        $("#mygallery").justifiedGallery();
+			</script>
+<div>
+	<!--====== Javascripts & Jquery ======-->
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.slicknav.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
@@ -67,5 +375,7 @@
 	<script src="js/instafeed.min.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/main.js"></script>
-</body>
+
+
+	</body>
 </html>
